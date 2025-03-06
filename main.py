@@ -11,7 +11,8 @@ def hello():
     navLinks = soup.find_all("a", class_ = "gb1")
     return str(navLinks)
 
-#each route is an api call to my microservice
+#each route is an api call to my microservice --
+
 @app.route('/getprices/<item>')
 def getprices (item):
     ebayURL = f'https://www.ebay.com/sch/i.html?_nkw={item}&LH_Complete=1'
