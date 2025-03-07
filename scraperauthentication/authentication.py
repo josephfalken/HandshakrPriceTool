@@ -24,7 +24,7 @@ def initialize_if_needed():
     tokens = [i.strip('\n') for i in tokens] # Remove trailing \n
     token_set = set(tokens)
 
-# Return true if this token signifies authorization, false otherwise
+# Return true if this token signifies authorization; false otherwise
 def is_authorized_token(token):
     initialize_if_needed()
     return token in token_set
